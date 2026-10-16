@@ -11,6 +11,8 @@ WORKDIR /workspace
 
 # Copy build.gradle + settings.gradle trước, tải dependency để tận dụng cache layer
 COPY build.gradle settings.gradle ./
+COPY gradlew ./
+COPY gradle ./gradle
 RUN chmod +x gradlew
 
 # Copy mã nguồn rồi đóng gói file JAR (bỏ qua test)
